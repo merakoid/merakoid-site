@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b10">
+  <meta name="description" content="Merakoid: Gerçek olaylar, açıklanamayan gizemler ve tarihin en şaşırtıcı hikâyeleri.">
+  <title>Merakoid — Merakın karanlık tarafı</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Merakoid ana sayfa"><span class="brand-mark">M<span>•</span></span><span>MERAKOID</span></a>
+    <nav class="nav" aria-label="Ana menü">
+      <a href="#hikayeler">Hikâyeler</a><a href="#hakkinda">Merakoid nedir?</a>
+    </nav>
+    <a class="social-link" href="https://www.instagram.com/merakoid/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> GERÇEK OLAYLAR · SIRA DIŞI HİKÂYELER</p>
+        <h1>Her şey göründüğü<br>gibi <em>değil.</em></h1>
+        <p class="hero-description">Dünyanın unuttuğu olaylar, açıklaması zor tesadüfler ve gerçek olduğuna inanamayacağın hikâyeler.</p>
+        <a class="primary-button" href="#hikayeler">Hikâyelere dal <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="moon"></div><div class="mountain mountain-back"></div><div class="mountain mountain-front"></div>
+        <div class="signal signal-a"></div><div class="signal signal-b"></div>
+        <div class="hero-stamp"><span>MERAK ET.</span><strong>SORGULA.</strong><span>KEŞFET.</span></div>
+      </div>
+      <div class="hero-bottom"><span>01 / MERAKIN BAŞLANGICI</span><span>SONUNA KADAR OKUMAYA CESARETİN VAR MI?</span></div>
+    </section>
+
+    <section class="story-section" id="hikayeler">
+      <div class="section-heading">
+        <div><p class="eyebrow">ARŞİVDEN SEÇİLENLER</p><h2>Merak uyandıran <em>gerçekler.</em></h2></div>
+        <p class="section-note">Her hikâyenin ardında gerçek bir olay var.<br>Sen sadece ilk katmanını görüyorsun.</p>
+      </div>
+      <div class="toolbar">
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Bir hikâye ara..." aria-label="Hikâye ara"></label>
+        <div class="filters" role="group" aria-label="Kategori filtresi">
+          <button class="filter active" data-filter="all">Tümü</button><button class="filter" data-filter="history">Tarihten</button><button class="filter" data-filter="mystery">Gizem</button><button class="filter" data-filter="strange">Tuhaf olaylar</button>
+        </div>
+      </div>
+      <div class="story-grid" id="storyGrid" aria-live="polite"></div>
+      <p class="empty-state" id="emptyState" hidden>Bu aramayla eşleşen bir hikâye bulamadık. Başka bir kelime dene.</p>
+    </section>
+
+    <section class="quote-band" id="hakkinda">
+      <div class="quote-symbol">“</div><div><p class="eyebrow">MERAKOID MANİFESTOSU</p><h2>En ilginç hikâyeler,<br><em>gerçek olanlardır.</em></h2><p>Merakoid; tarihin tuhaf sayfalarını, gizemli olayları ve insanı durup düşündüren gerçek hikâyeleri keşfetmek için var.</p></div>
+      <div class="quote-side">BİLİNMEYENİ<br>MERAK ET.</div>
+    </section>
+
+    <section class="follow-section">
+      <div class="follow-icon">M<span>•</span></div><div><p class="eyebrow">HİKÂYE BURADA BİTMİYOR</p><h2>Bir sonraki gizemi kaçırma.</h2><p>Yeni kısa hikâyeler ve videolar için Merakoid'i takip et.</p></div>
+      <a class="primary-button" href="https://www.instagram.com/merakoid/" target="_blank" rel="noopener noreferrer">Instagram'da takip et <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#top"><span class="brand-mark">M<span>•</span></span><span>MERAKOID</span></a><p>Merak et. Sorgula. Keşfet.</p><span>© <span id="year"></span> MERAKOID</span></footer>
+
+  <dialog class="story-modal" id="storyModal" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Pencereyi kapat">×</button>
+    <div class="modal-art" id="modalArt"></div>
+    <div class="modal-content"><p class="eyebrow" id="modalCategory"></p><h2 id="modalTitle"></h2><p class="modal-summary" id="modalSummary"></p><div class="fact-box"><span class="fact-label">BİLİNMESİ GEREKEN</span><p id="modalFact"></p></div><p class="modal-note">Bu sayfadaki metin kısa bir giriş niteliğindedir. Yayına almadan önce her hikâyenin kaynaklarını ve tarihlerini kontrol ederek ayrıntılı içerik ekleyebilirsin.</p><a class="primary-button modal-cta" href="https://www.instagram.com/merakoid/" target="_blank" rel="noopener noreferrer">Daha fazlası için takip et <span aria-hidden="true">↗</span></a></div>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
