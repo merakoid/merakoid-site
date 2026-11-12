@@ -27,3 +27,8 @@ Kendi alan adının (ör. `merakoid.com`) satın alınması genellikle ücretlid
 - Instagram kullanıcı adının doğru olduğundan emin ol; bağlantı şu anda `instagram.com/merakoid/` olarak ayarlı.
 - Örnek hikâyeleri ve tarihleri kaynaklarla kontrol et; özellikle popüler anlatılardaki kesin olmayan ayrıntıları doğrula.
 - Siteye kendi Reels/YouTube video bağlantılarını eklemek istersen kartlara video bağlantısı veya gömülü oynatıcı eklenebilir.
+
+## SEO ve hikâye sayfaları
+- Her hikâye için ayrı HTML sayfası oluşturuldu.
+- `sitemap.xml` hikâye sayfalarını listeler.
+- `robots.txt` site haritasını işaret eder.
