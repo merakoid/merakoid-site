@@ -17,7 +17,7 @@
   <header class="topbar">
     <a class="brand" href="#top" aria-label="Merakoid ana sayfa"><img class="brand-logo" src="merakoid-logo.png" alt="Merakoid" width="78" height="78"></a>
     <nav class="nav" aria-label="Ana menü">
-      <a href="#hikayeler">Hikâyeler</a><a href="#hakkinda">Merakoid nedir?</a>
+      <a href="#reels">Reels</a><a href="#hikayeler">Hikâyeler</a><a href="#hakkinda">Merakoid nedir?</a>
     </nav>
     <a class="social-link" href="https://www.instagram.com/merakoid/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
   </header>
@@ -37,6 +37,16 @@
         <div class="hero-stamp"><span>MERAK ET.</span><strong>SORGULA.</strong><span>KEŞFET.</span></div>
       </div>
       <div class="hero-bottom"><span>01 / MERAKIN BAŞLANGICI</span><span>SONUNA KADAR OKUMAYA CESARETİN VAR MI?</span></div>
+    </section>
+
+    <section class="story-section" id="reels">
+      <div class="section-heading">
+        <div><p class="eyebrow">INSTAGRAM'DAN SON PAYLAŞIMLAR</p><h2>Merakoid <em>Reels.</em></h2></div>
+        <p class="section-note">Yeni videolar otomatik olarak burada listelenir.</p>
+      </div>
+      <div class="story-grid" id="reelsGrid" aria-live="polite">
+        <article class="story-card"><div class="card-body"><p>Son videolar yükleniyor…</p><a class="read-more" href="https://www.instagram.com/merakoid/" target="_blank" rel="noopener noreferrer">Instagram profilini aç ↗</a></div></article>
+      </div>
     </section>
 
     <section class="story-section" id="hikayeler">
@@ -73,5 +83,6 @@
     <div class="modal-content"><p class="eyebrow" id="modalCategory"></p><h2 id="modalTitle"></h2><p class="modal-summary" id="modalSummary"></p><div class="fact-box"><span class="fact-label">BİLİNMESİ GEREKEN</span><p id="modalFact"></p></div><p class="modal-note">Bu sayfadaki metin kısa bir giriş niteliğindedir. Yayına almadan önce her hikâyenin kaynaklarını ve tarihlerini kontrol ederek ayrıntılı içerik ekleyebilirsin.</p><a class="primary-button modal-cta" href="https://www.instagram.com/merakoid/" target="_blank" rel="noopener noreferrer">Daha fazlası için takip et <span aria-hidden="true">↗</span></a></div>
   </dialog>
   <script src="script.js?v=paper-42-folds-20261116"></script>
+  <script src="reels-feed.js?v=1"></script>
 </body>
 </html>
