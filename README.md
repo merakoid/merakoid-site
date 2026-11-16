@@ -32,3 +32,24 @@ Kendi alan adının (ör. `merakoid.com`) satın alınması genellikle ücretlid
 - Her hikâye için ayrı HTML sayfası oluşturuldu.
 - `sitemap.xml` hikâye sayfalarını listeler.
 - `robots.txt` site haritasını işaret eder.
+
+## Instagram Reels otomatik senkronizasyonu
+
+Ana sayfadaki **Reels** bölümü `reels.json` dosyasını okur. GitHub Actions iş akışı her 6 saatte bir Instagram Graph API'den son videoları alıp bu dosyayı günceller. GitHub Pages, değişiklikten sonra siteyi yeniden yayınlar. Barındırma ve iş akışı GitHub'ın ücretsiz kullanım sınırları içinde kalır.
+
+### Bir defalık kurulum: Instagram API anahtarları
+
+Bu bölümün otomatik çalışması için Instagram hesabının **Profesyonel (İçerik Üreticisi veya İşletme)** olması ve bir Facebook Sayfasına bağlanması gerekir.
+
+1. Meta for Developers üzerinden bir Meta uygulaması oluştur ve Instagram Graph API erişimini yapılandır. Instagram profesyonel hesabı için gereken erişim izinlerini ver.
+2. Instagram profesyonel hesap kimliğini (`IG_USER_ID`) ve geçerli erişim belirtecini (`IG_ACCESS_TOKEN`) edin. Erişim belirtecini kimseyle paylaşma ve site dosyalarına yazma.
+3. GitHub deposunda **Settings → Secrets and variables → Actions → New repository secret** bölümüne git.
+4. `IG_USER_ID` adlı secret oluşturup hesap kimliğini ekle.
+5. `IG_ACCESS_TOKEN` adlı secret oluşturup erişim belirtecini ekle.
+6. **Actions → Sync Instagram Reels → Run workflow** ile ilk senkronizasyonu elle başlat. Sonrasında iş akışı her 6 saatte bir çalışır.
+
+Secrets eklenene kadar otomatik API senkronizasyonu çalışmaz; ana sayfada mevcut başlangıç Reels bağlantısı görünür. Meta API erişimi/izinleri hesap yapılandırmasına bağlıdır. İş akışı hata verirse GitHub deposundaki **Actions** sekmesinden hata kaydını kontrol et.
+
+## İstatistik takibi
+
+Instagram performans istatistikleri Metricool üzerinden takip edilir. Reels senkronizasyonu siteye yeni videoları taşır; Instagram görüntülenme, erişim, beğeni, yorum, kaydetme ve paylaşım verileri ayrı bir analiz kaynağıdır ve siteye yazılmaz.
